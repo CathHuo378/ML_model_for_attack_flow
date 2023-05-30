@@ -19,8 +19,6 @@ This model is a tool that helps automate the construction of Attack Flow models.
 ## Interpreter and tools
 * Python 3
 
-   ```
-
 ## USAGE
 
 ### Running
