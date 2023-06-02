@@ -13,7 +13,7 @@ from difflib import SequenceMatcher
 from deepl_utils import *
 
 #import dataset with attack technique labels
-techniques_df = pd.read_csv("dataset_new.csv")
+techniques_df = pd.read_csv("dataset.csv")
 #import MLP classifier
 ml_model_filenames = ['ml_models/MLP_classifier.sav']
 
