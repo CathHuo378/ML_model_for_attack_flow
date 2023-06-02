@@ -3,7 +3,7 @@ System developed for Advanced Topics in Computer Science
 
 Date: 2023-06-03
 
-Version: 1.1.1
+Version: 1.0.0
 
 
 ## Purpose
