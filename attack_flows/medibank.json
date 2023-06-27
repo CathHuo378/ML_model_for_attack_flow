@@ -1,0 +1,437 @@
+{
+  "type": "bundle",
+  "id": "bundle--0b3c0af6-24e3-4e43-b6d0-d88a006d50a4",
+  "spec_version": "2.1",
+  "created": "2023-06-27T01:42:27.352Z",
+  "modified": "2023-06-27T01:42:27.352Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "create_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Engenuity Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--9a0be1be-bdaf-4f6f-9d3c-4b3653b3a31a",
+      "spec_version": "2.1",
+      "created": "2023-04-23T06:33:15.897Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--2602be70-2ba3-4050-936e-3834a30098db",
+      "start_refs": [
+        "attack-action--b4332acb-7801-48b6-871a-da8f12bb226d",
+        "attack-condition--37d816e8-949d-4e34-bc21-30cf5ff188e9",
+        "attack-action--f8d9e206-8ff2-4290-bb0d-d9a2b1cdc8a7",
+        "attack-condition--2c1a37a2-7b49-42c7-b81e-faa7ab34b1e1",
+        "attack-condition--0a2e56b6-6509-4121-bdce-8a85169db038"
+      ],
+      "name": "medibank",
+      "description": "An attack flow chart on the Medibank data breach",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "What Caused the Medibank Data Breach?",
+          "description": null,
+          "url": "https://www.upguard.com/blog/what-caused-the-medibank-data-breach"
+        },
+        {
+          "source_name": "Medibank reveals attack vector and cost of 2022 security breach",
+          "description": null,
+          "url": "https://www.itnews.com.au/news/medibank-reveals-attack-vector-and-cost-of-2022-security-breach-591233"
+        },
+        {
+          "source_name": "Cyber event timeline",
+          "description": null,
+          "url": "https://www.medibank.com.au/health-insurance/info/cyber-security/timeline/"
+        },
+        {
+          "source_name": "Revealed: how crooks got inside Medibank",
+          "description": null,
+          "url": "https://www.afr.com/technology/revealed-how-crooks-got-inside-medibank-20221024-p5bsg4"
+        },
+        {
+          "source_name": "What We Learned from Medibank Ransomware Incident",
+          "description": null,
+          "url": "https://socradar.io/what-we-learned-from-medibank-ransomware-incident/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--2602be70-2ba3-4050-936e-3834a30098db",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e85487e6-48db-42be-a9d7-e2ad0d58e64a",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Valid Accounts",
+      "tactic_id": "T1078",
+      "description": "Stolen credentials belonging to an individual with privileged access to Medibank’s internal systems are used to gain access to Medibank’s internal system.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--0b515d07-ae0b-4bc5-b2cd-ce5e00dbac1a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9ff1b8f2-abd2-4ff4-9712-6c50f66c4293",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Archive Collected Data",
+      "tactic_id": "T1560",
+      "description": "The attacker placed stolen data into a zip file and extracted them through two established backdoors.",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--3deb36fd-b42b-43d7-8d31-ed99c6d326b8"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--3deb36fd-b42b-43d7-8d31-ed99c6d326b8",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Medibank customers records",
+      "description": "Including:\nName\nBirth dates\nPassport numbers\nInformation on medicare claims"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b4332acb-7801-48b6-871a-da8f12bb226d",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Phishing for Information",
+      "tactic_id": "T1598",
+      "description": "Sending fraudulent emails with malicious links leading to credential-stealing websites",
+      "confidence": 30,
+      "asset_refs": [
+        "attack-asset--380cd57c-2ad7-41a5-870e-236fa85428a8"
+      ],
+      "effect_refs": [
+        "attack-operator--537a827c-763a-46af-a467-86d823806a63"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--380cd57c-2ad7-41a5-870e-236fa85428a8",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Medibank credentials ",
+      "description": "An individual account with privileged access"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--37d816e8-949d-4e34-bc21-30cf5ff188e9",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Obtaining credentials with privileged access",
+      "on_true_refs": [
+        "attack-action--497777d4-5c45-4174-954c-d168debb1a15",
+        "attack-action--e85487e6-48db-42be-a9d7-e2ad0d58e64a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f8d9e206-8ff2-4290-bb0d-d9a2b1cdc8a7",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Gather Victim Network Information",
+      "tactic_id": "T1590",
+      "description": "The attacker obtained the user ID and password used by a third-party IT services contractor",
+      "confidence": 70,
+      "asset_refs": [
+        "attack-asset--380cd57c-2ad7-41a5-870e-236fa85428a8"
+      ],
+      "effect_refs": [
+        "attack-operator--537a827c-763a-46af-a467-86d823806a63"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0e128e0d-19b0-4b36-983e-a8ff8cd34d27",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "External Remote Services",
+      "tactic_id": "T1133",
+      "description": "The actor connected to internal Medibank network resources from external locations so that their access was not contained",
+      "confidence": 30,
+      "effect_refs": [
+        "attack-action--3bf5c910-09c7-4a9c-b3b8-179716799f9a",
+        "attack-action--c11108cf-54b6-420a-8f8d-dfcbe17e63c2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c11108cf-54b6-420a-8f8d-dfcbe17e63c2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Data from Information Repositories",
+      "tactic_id": "T1213",
+      "description": "The attacker accessed internal documentation to understand how the different systems and internal applications work, and how they are structured to share information.",
+      "confidence": 30,
+      "effect_refs": [
+        "attack-operator--7fedd648-74bf-4277-90b0-b202990e4148"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--537a827c-763a-46af-a467-86d823806a63",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-condition--37d816e8-949d-4e34-bc21-30cf5ff188e9"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--3bf5c910-09c7-4a9c-b3b8-179716799f9a",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Cloud Infrastructure Discovery",
+      "tactic_id": "T1580",
+      "description": "The threat actor identified the location of a customer database.",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--220305c0-6fe3-4a6c-8d7b-9a3c6db4cede"
+      ],
+      "effect_refs": [
+        "attack-operator--7fedd648-74bf-4277-90b0-b202990e4148"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--220305c0-6fe3-4a6c-8d7b-9a3c6db4cede",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "A Customer Database"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a972a860-aed4-4682-be71-3cea1cbc50f1",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Automated Exfiltration",
+      "tactic_id": "T1020",
+      "description": "The threat actor wrote a script to automate the customer data exfiltration process.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--9ff1b8f2-abd2-4ff4-9712-6c50f66c4293"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--79be1d49-9da1-4b02-bfe1-e4ad3eea3f93",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.352Z",
+      "modified": "2023-06-27T01:42:27.352Z",
+      "name": "BlogXX",
+      "description": "A cybercriminal group believed to be a reformation of the notorious ransomware gange REVil.",
+      "threat_actor_types": [
+        "Ransomware"
+      ],
+      "goals": [
+        "Demanding Medibank for a ransom of 10 million USD."
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--497777d4-5c45-4174-954c-d168debb1a15",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.354Z",
+      "modified": "2023-06-27T01:42:27.354Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exploit Public-Facing Application",
+      "tactic_id": "T1190",
+      "description": "The threat actor utilised the misconfigured firewall to bypass the need to present “an additional digital security certificate” to access the Medibank systems.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--0b515d07-ae0b-4bc5-b2cd-ce5e00dbac1a"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--0b515d07-ae0b-4bc5-b2cd-ce5e00dbac1a",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.354Z",
+      "modified": "2023-06-27T01:42:27.354Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-condition--2c1a37a2-7b49-42c7-b81e-faa7ab34b1e1"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--2c1a37a2-7b49-42c7-b81e-faa7ab34b1e1",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.354Z",
+      "modified": "2023-06-27T01:42:27.354Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Gaining access to the Medibank's internal system",
+      "on_true_refs": [
+        "attack-action--0e128e0d-19b0-4b36-983e-a8ff8cd34d27"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--7fedd648-74bf-4277-90b0-b202990e4148",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.354Z",
+      "modified": "2023-06-27T01:42:27.354Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-condition--0a2e56b6-6509-4121-bdce-8a85169db038"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--0a2e56b6-6509-4121-bdce-8a85169db038",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:27.354Z",
+      "modified": "2023-06-27T01:42:27.354Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Located the customer database and understood the internal structure of the database",
+      "on_true_refs": [
+        "attack-action--a972a860-aed4-4682-be71-3cea1cbc50f1"
+      ]
+    }
+  ]
+}

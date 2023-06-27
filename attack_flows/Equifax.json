@@ -1,0 +1,567 @@
+{
+  "type": "bundle",
+  "id": "bundle--2df4ca3d-c093-42c3-81b4-0f81c08be636",
+  "spec_version": "2.1",
+  "created": "2023-06-27T01:42:04.926Z",
+  "modified": "2023-06-27T01:42:04.926Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "create_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Engenuity Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--ce3a03aa-fa5a-448d-974b-307dd33173cf",
+      "spec_version": "2.1",
+      "created": "2023-05-26T06:14:46.191Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--3d48245a-e9d5-41f6-8503-7e63de1f65b5",
+      "start_refs": [
+        "attack-action--0b386001-5894-4fae-804a-d7da66d9bdc2",
+        "attack-condition--0133e5ab-01c3-4088-9677-9b3d693b649f",
+        "attack-action--b258ea26-56a1-4a50-8c52-22eaf0658878",
+        "attack-action--feefcf96-b61f-4e77-aae9-96f73b0d59f2",
+        "attack-condition--f524a5fa-c4f1-4751-b268-05a9d7126cd7",
+        "attack-condition--13dea779-09b7-4c76-b5dc-51b6d254ee9c"
+      ],
+      "name": "Equifax",
+      "description": "An attack flow chart on the data breach of Equifax in 2017",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "How the Equifax hack happened, and what still needs to be done",
+          "description": null,
+          "url": "https://www.cnet.com/news/privacy/equifaxs-hack-one-year-later-a-look-back-at-how-it-happened-and-whats-changed/"
+        },
+        {
+          "source_name": "Equifax data breach FAQ: What happened, who was affected, what was the impact?",
+          "description": null,
+          "url": "https://www.csoonline.com/article/3444488/equifax-data-breach-faq-what-happened-who-was-affected-what-was-the-impact.html"
+        },
+        {
+          "source_name": "Chinese Military Personnel Charged with Computer Fraud, Economic Espionage and Wire Fraud for Hacking into Credentials of Equifax Inc.",
+          "description": null,
+          "url": "https://www.justice.gov/opa/press-release/file/1246891/download"
+        },
+        {
+          "source_name": "Actions Taken by Equifax and Federal\nAgencies in Response to the 2017 Breach",
+          "description": null,
+          "url": "https://www.warren.senate.gov/imo/media/doc/2018.09.06%20GAO%20Equifax%20report.pdf"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--3d48245a-e9d5-41f6-8503-7e63de1f65b5",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0b386001-5894-4fae-804a-d7da66d9bdc2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Active Scanning: Vulnerability Scanning",
+      "tactic_id": "T1595.002",
+      "description": "The attackers searched the web for any servers with vulnerabilities.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-condition--7a8ee72c-ff4c-4cac-a8bd-116b6dbd8e7a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9d32cdc8-22e2-4470-b852-1d7dd4090214",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exploit Public-Facing Application",
+      "tactic_id": "T1190",
+      "description": "The attackers used an Apache Struts vulnerability and gained access to login credentials for three servers.",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--e6d019e5-ee3e-44b6-9df2-0adb795f990e"
+      ],
+      "effect_refs": [
+        "attack-action--c9e0fcbe-ba8f-4ba2-beee-1bb00538ae5b",
+        "attack-action--6890a2ae-2ea9-40b5-b0ee-b252f14555b1"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--7a8ee72c-ff4c-4cac-a8bd-116b6dbd8e7a",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Found an Apache Struts vulnerability",
+      "on_true_refs": [
+        "attack-action--9d32cdc8-22e2-4470-b852-1d7dd4090214"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--e6d019e5-ee3e-44b6-9df2-0adb795f990e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Login credentials for three servers"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c9e0fcbe-ba8f-4ba2-beee-1bb00538ae5b",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Valid Accounts",
+      "tactic_id": "T1078",
+      "description": "The attackers used the gained credentials to access another 48 servers containing personal information.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--441d2632-e38b-48ee-bd50-9edd3c938e3a"
+      ],
+      "asset_refs": [
+        "attack-asset--2ebeddf7-7190-4726-b958-3b837c4b7578"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--2ebeddf7-7190-4726-b958-3b837c4b7578",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "48 servers containing personal information"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--d68f0538-f7d7-43ed-9df4-03be91ceb289",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "51 databases"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--6890a2ae-2ea9-40b5-b0ee-b252f14555b1",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Unsecured Credentials",
+      "tactic_id": "T1552",
+      "description": "The attackers found usernames and passwords stored in plain text.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--441d2632-e38b-48ee-bd50-9edd3c938e3a"
+      ],
+      "asset_refs": [
+        "attack-asset--2ebeddf7-7190-4726-b958-3b837c4b7578"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--25d53f0e-ea62-4ae5-8415-2d33cb6f25f2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Archive Collected Data",
+      "tactic_id": "T1560",
+      "description": "The attackers stored the stolen information in temporary files, compressed and divided the large data files into more manageable file sizes for transmission. The archive contained 49 directories and was split into 600 megabyte segments.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--f6214952-8e6e-4b07-bbf8-afb4c59e5970"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--441d2632-e38b-48ee-bd50-9edd3c938e3a",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-condition--f524a5fa-c4f1-4751-b268-05a9d7126cd7"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2e59a915-917a-4fc5-8eec-b94686c6d68b",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Obfuscated Files or Information",
+      "tactic_id": "T1027",
+      "description": "The attackers encrypted the data to be exfiltrated.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--f6214952-8e6e-4b07-bbf8-afb4c59e5970"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--316ae011-4a7d-431f-8c04-22387ed67e03",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "name": "CVE-2017-5638",
+      "description": "The Jakarta Multipart parser in Apache Struts 2 2.3.x before 2.3.32 and 2.5.x before 2.5.10.1 has incorrect exception handling and error-message generation during file-upload attempts, which allows remote attackers to execute arbitrary commands via a crafted Content-Type, Content-Disposition, or Content-Length HTTP header, as exploited in the wild in March 2017 with a Content-Type header containing a #cmd= string."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--6a355927-4b9b-410d-b40a-4faa14c48f3e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Server Software Component: Web Shell",
+      "tactic_id": "T1505.003",
+      "description": "The attackers installed web shells created through Apache Struts and issued commands using SQL.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--321c7458-b476-48b9-9389-4c343214bbc2",
+        "attack-action--ae0c6d34-5ca7-4daa-b4e0-8c6869fdbd3e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--321c7458-b476-48b9-9389-4c343214bbc2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote Services: Remote Desktop Protocol",
+      "tactic_id": "T1021.001",
+      "description": "The attackers employed a variety of encrypted login protocols, including Remote Desktop Protocol to hide the origin and location of their internet traffic.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--1af6096f-bdf1-4663-8a2f-8a4e962dfec0"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--ae0c6d34-5ca7-4daa-b4e0-8c6869fdbd3e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote Services: SSH",
+      "tactic_id": "T1021.004",
+      "description": "The attackers used Secure Shell software to connect to servers over network connections from other servers they controlled.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--1af6096f-bdf1-4663-8a2f-8a4e962dfec0"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--0133e5ab-01c3-4088-9677-9b3d693b649f",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Hiding the origin and location of their internet traffic ",
+      "on_true_refs": [
+        "attack-action--b1733983-4ed5-4316-9623-b63598aa291b"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--1af6096f-bdf1-4663-8a2f-8a4e962dfec0",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-condition--0133e5ab-01c3-4088-9677-9b3d693b649f"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b258ea26-56a1-4a50-8c52-22eaf0658878",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Indicator Removal: File Deletion",
+      "tactic_id": "T1070.004",
+      "description": "The attackers deleted the compressed files after exfiltrating the sensitive data.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--f6214952-8e6e-4b07-bbf8-afb4c59e5970"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--feefcf96-b61f-4e77-aae9-96f73b0d59f2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Indicator Removal: Clear Windows Event Logs",
+      "tactic_id": "T1070.001",
+      "description": "The attackers configured settings on at least one of their leased servers that wiped log files on a daily basis in an effort to eliminate records of their activity.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--f6214952-8e6e-4b07-bbf8-afb4c59e5970"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--7a896775-f917-49c1-9141-70471d637a5d",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "name": "Wu ZhiYong, Wang Qian, Xu Ke, Liu Lei",
+      "description": "members of the People's Liberation Army (\"PLA\"), the armed forces of the People's\nRepublic of China (\"China\")"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--f524a5fa-c4f1-4751-b268-05a9d7126cd7",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Obtained database service login credentials",
+      "on_true_refs": [
+        "attack-action--6a355927-4b9b-410d-b40a-4faa14c48f3e"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--303ee014-62fe-4a5e-ba8b-d53d3ade93e3",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "name": "jndi.txt"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b1733983-4ed5-4316-9623-b63598aa291b",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "T1105",
+      "description": "The attackers utilised the malicious web shell ''css.jsp,\" which was previously installed on Equifax' s network, to issue a command to download the \"abc.txt\" file from the Taiwan Server.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-condition--78355245-ced1-4877-bed3-929a0065fb9c"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--b4b63b69-3815-4864-884a-19cf26c4a8c2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "name": "abc.txt"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--78355245-ced1-4877-bed3-929a0065fb9c",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "The system has an expired digital certificate ",
+      "on_true_refs": [
+        "attack-action--2e59a915-917a-4fc5-8eec-b94686c6d68b",
+        "attack-action--25d53f0e-ea62-4ae5-8415-2d33cb6f25f2"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--13dea779-09b7-4c76-b5dc-51b6d254ee9c",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "The attack lasted for about 76 days before it was discovered."
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--f6214952-8e6e-4b07-bbf8-afb4c59e5970",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-condition--13dea779-09b7-4c76-b5dc-51b6d254ee9c"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ff243fc3-9c65-440e-8e23-0027a8cbf5ff",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--0b386001-5894-4fae-804a-d7da66d9bdc2",
+      "target_ref": "vulnerability--316ae011-4a7d-431f-8c04-22387ed67e03"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e893b43c-b8e0-4e11-b6da-e772647bb2ba",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--321c7458-b476-48b9-9389-4c343214bbc2",
+      "target_ref": "file--303ee014-62fe-4a5e-ba8b-d53d3ade93e3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f93d2400-954f-464f-9b12-7081c29412f7",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:04.927Z",
+      "modified": "2023-06-27T01:42:04.927Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--b1733983-4ed5-4316-9623-b63598aa291b",
+      "target_ref": "file--b4b63b69-3815-4864-884a-19cf26c4a8c2"
+    }
+  ]
+}

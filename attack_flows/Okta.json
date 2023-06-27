@@ -1,0 +1,413 @@
+{
+  "type": "bundle",
+  "id": "bundle--e3465e8f-13dc-450a-82bb-3dcfd3ff07a5",
+  "spec_version": "2.1",
+  "created": "2023-06-27T01:42:35.226Z",
+  "modified": "2023-06-27T01:42:35.226Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "create_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Engenuity Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--81159312-835a-46ff-a336-d8444bbc5165",
+      "spec_version": "2.1",
+      "created": "2023-05-21T12:01:57.186Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--4a1aa5c4-3297-479d-a74d-ec5e168c4d7e",
+      "start_refs": [
+        "attack-action--54f02fd6-b7b8-4d47-954b-59a2ba7d88be",
+        "attack-action--35f48a04-eb13-42ab-9a3c-62a4043b56ea",
+        "attack-action--7fa44c2e-5889-49b1-8d4b-5372ef1ef11e"
+      ],
+      "name": "Okta",
+      "description": "An attack flow chart on the Okta data breach incident",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "Okta names Sitel in Lapsus$ security incident impacting up to 366 customers",
+          "description": null,
+          "url": "https://www.zdnet.com/article/okta-names-sitel-in-security-incident-potentially-impacting-hundreds-of-customers/"
+        },
+        {
+          "source_name": "Okta Concludes its Investigation Into the January 2022 Compromise",
+          "description": null,
+          "url": "https://www.okta.com/au/blog/2022/04/okta-concludes-its-investigation-into-the-january-2022-compromise/"
+        },
+        {
+          "source_name": "Okta’s Investigation of the January 2022 Compromise",
+          "description": null,
+          "url": "https://www.okta.com/au/blog/2022/03/oktas-investigation-of-the-january-2022-compromise/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--4a1aa5c4-3297-479d-a74d-ec5e168c4d7e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z"
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--3bb49f7d-63d3-4a5e-8646-1d5a78e0e7d3",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "name": "LAPSUS$",
+      "description": "An international extortion-focused hacker group classified by Microsoft as DEV-0537"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--b08c441b-50c5-437e-b84e-4e112c05eab6",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "366 Okta customers' record"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--eba5bfe4-f3fd-4622-85e9-4ccd40a461b2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "A Single Workstation",
+      "description": "A single workstation used by a Sitel support engineer, with access to Okta resources."
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--176f6ea1-5693-4b93-b61d-7c050a9d01ca",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Two active customer tenants within the SuperUser application"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--6e94527a-a35f-43e2-86ee-40c52df83a92",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Performing any configuration changes, MFA or password resets, or customer support “impersonation” events",
+      "on_false_refs": [
+        "attack-operator--2eceb2d9-a884-49f3-8f60-c48c2452ec9e"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--0fd67e77-9e64-4056-a5e5-88e42e376c75",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Adding a new multi-factor authentication on the Sitel support engineer's account",
+      "on_false_refs": [
+        "attack-operator--2eceb2d9-a884-49f3-8f60-c48c2452ec9e"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--2eceb2d9-a884-49f3-8f60-c48c2452ec9e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--35f48a04-eb13-42ab-9a3c-62a4043b56ea"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--3bb893bb-1e56-469f-9a0b-6641ea55601e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Screenshots of Superuser/Admin and various other systems of Okta.com"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0ecde037-22fe-492f-a738-522906b66b1c",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Impair Defenses",
+      "tactic_id": "T1562",
+      "description": "The attacker created a malicious ’email transport rule’ to forward all mail within Sitel’s environment to their own accounts.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--4cbea522-00ae-497f-be9a-e678cebef350"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--54f02fd6-b7b8-4d47-954b-59a2ba7d88be",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote Services: Remote Desktop Protocol",
+      "tactic_id": "T1021.001",
+      "description": "The attacker obtained remote access to a Sitel support engineer’s computer using RDP. ",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--eba5bfe4-f3fd-4622-85e9-4ccd40a461b2",
+        "attack-asset--176f6ea1-5693-4b93-b61d-7c050a9d01ca",
+        "attack-asset--3bb893bb-1e56-469f-9a0b-6641ea55601e"
+      ],
+      "effect_refs": [
+        "attack-condition--6e94527a-a35f-43e2-86ee-40c52df83a92",
+        "attack-condition--0fd67e77-9e64-4056-a5e5-88e42e376c75"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8a90c1c4-8d5d-496f-ac9c-51836fbc64fc",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exploitation for Privilege Escalation",
+      "tactic_id": "T1068",
+      "description": "The threat actor did a Bing search for privilege escalation tools on GitHub.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--f0f987ce-5f6f-43e0-94f8-7b11968d4a76"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--818bb377-fe8f-4e3a-951f-46db74668ee1",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "T1105",
+      "description": "The threat actor searched for a CVE-2021-34484 bypass on their compromised host and downloaded the pre-built version from GitHub",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--f0f987ce-5f6f-43e0-94f8-7b11968d4a76"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--35f48a04-eb13-42ab-9a3c-62a4043b56ea",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Obtain Capabilities: Vulnerabilities",
+      "tactic_id": "T1588.006",
+      "description": "The threat actor acquired information about the Windows User Profile Service Elevation of Privilege Vulnerability (CVE-2021-34484).",
+      "effect_refs": [
+        "attack-action--8a90c1c4-8d5d-496f-ac9c-51836fbc64fc",
+        "attack-action--818bb377-fe8f-4e3a-951f-46db74668ee1"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--385d10ba-efe2-4e70-b5b3-6879d7bd7385",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "name": "Windows User Profile Service Elevation of Privilege Vulnerability",
+      "description": "CVE-2021-34484"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e06b787a-984c-459c-9b7a-1b26b71d132c",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Develop Capabilities: Malware",
+      "tactic_id": "T1587.001",
+      "description": "The attacker created backdoor users within Sitel’s environment.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--0ecde037-22fe-492f-a738-522906b66b1c"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--7fa44c2e-5889-49b1-8d4b-5372ef1ef11e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Impair Defenses",
+      "tactic_id": "T1562",
+      "description": "The threat actor terminated the FireEye endpoint agent. ",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--2181df90-55ef-4842-a7df-b2c7c1e79394"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2181df90-55ef-4842-a7df-b2c7c1e79394",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer ",
+      "tactic_id": "T1105",
+      "description": "The threat actor downloaded the official version of Mimikatz (a popular credential dumping utility) directly from its repository.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--e06b787a-984c-459c-9b7a-1b26b71d132c"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--f0f987ce-5f6f-43e0-94f8-7b11968d4a76",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--7fa44c2e-5889-49b1-8d4b-5372ef1ef11e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--4cbea522-00ae-497f-be9a-e678cebef350",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exfiltration Over Web Service",
+      "tactic_id": "T1567",
+      "description": "The threat actor forwarded all mail containing user information within Sitel’s environment to their own accounts.",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--b08c441b-50c5-437e-b84e-4e112c05eab6"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--23956720-8ccf-4eab-be70-ac4831ca4184",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:35.226Z",
+      "modified": "2023-06-27T01:42:35.226Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--35f48a04-eb13-42ab-9a3c-62a4043b56ea",
+      "target_ref": "vulnerability--385d10ba-efe2-4e70-b5b3-6879d7bd7385"
+    }
+  ]
+}

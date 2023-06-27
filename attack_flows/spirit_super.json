@@ -1,0 +1,240 @@
+{
+  "type": "bundle",
+  "id": "bundle--990cdeda-375a-4e1e-b25b-66a457db4700",
+  "spec_version": "2.1",
+  "created": "2023-06-27T01:42:56.113Z",
+  "modified": "2023-06-27T01:42:56.113Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "create_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Engenuity Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--87621fd7-aedd-49e7-b5c5-c2ce824d2146",
+      "spec_version": "2.1",
+      "created": "2023-04-23T12:20:21.972Z",
+      "modified": "2023-06-27T01:42:56.113Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--3975f3d2-13e5-44c5-9b09-881b4bdbcdfc",
+      "start_refs": [
+        "attack-action--440c2f4a-26bb-4eea-99bf-0bfad223c1e6",
+        "attack-action--a3fc6d6e-6a9b-4ace-bf70-e59fd283c3f0",
+        "attack-action--9b2b1e14-a3de-46ab-9ac4-bc4e4a91f56d"
+      ],
+      "name": "spirit_super",
+      "description": "An attack flow chart of the Spirit Super data breach",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "50,000 super fund members impacted by data breach",
+          "description": null,
+          "url": "https://www.nestegg.com.au/retirement/superannuation/50-000-super-fund-members-impacted-by-data-breach"
+        },
+        {
+          "source_name": "Data breach at Australian pension provider Spirit Super impacts 50k victims following phishing attack",
+          "description": null,
+          "url": "https://portswigger.net/daily-swig/data-breach-at-australian-pension-provider-spirit-super-impacts-50k-victims-following-phishing-attack"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--3975f3d2-13e5-44c5-9b09-881b4bdbcdfc",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:56.113Z",
+      "modified": "2023-06-27T01:42:56.113Z"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--440c2f4a-26bb-4eea-99bf-0bfad223c1e6",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:56.113Z",
+      "modified": "2023-06-27T01:42:56.113Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Phishing",
+      "tactic_id": "T1566",
+      "description": "The attacker sent a malicious email attack posing as official correspondence",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--0aa4adfa-ce33-4212-9118-8427baa302a6"
+      ],
+      "effect_refs": [
+        "attack-condition--37a7cd0b-2f23-424d-ab68-6fec9c9df16f"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--0aa4adfa-ce33-4212-9118-8427baa302a6",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:56.113Z",
+      "modified": "2023-06-27T01:42:56.113Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Staff Credentials"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--37a7cd0b-2f23-424d-ab68-6fec9c9df16f",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:56.113Z",
+      "modified": "2023-06-27T01:42:56.113Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Obtaining one compromised staff credential",
+      "on_true_refs": [
+        "attack-action--d4a70c33-3998-4d1e-bb56-48e8bc2800c4"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a3fc6d6e-6a9b-4ace-bf70-e59fd283c3f0",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:56.113Z",
+      "modified": "2023-06-27T01:42:56.113Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Modify Authentication Process: Multi-Factor Authentication",
+      "tactic_id": "T1556.006",
+      "description": "Disabling MFA to enable persistent access to compromised accounts",
+      "confidence": 90,
+      "effect_refs": [
+        "attack-operator--45d603c9-5c3b-43c7-872b-8957023c1747"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9b2b1e14-a3de-46ab-9ac4-bc4e4a91f56d",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:56.113Z",
+      "modified": "2023-06-27T01:42:56.113Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Automated Exfiltration",
+      "tactic_id": "T1020",
+      "description": "Using an automated script to exfiltrate compromised user data",
+      "confidence": 30,
+      "asset_refs": [
+        "attack-asset--c8d18f32-03dd-49f0-b51c-203fc32c189d"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--c8d18f32-03dd-49f0-b51c-203fc32c189d",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:56.113Z",
+      "modified": "2023-06-27T01:42:56.113Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "User personal data",
+      "description": "Names\nAddresses\nAges\nEmail addresses\nPhone numbers\nSuper account numbers"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--d4a70c33-3998-4d1e-bb56-48e8bc2800c4",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:56.113Z",
+      "modified": "2023-06-27T01:42:56.113Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Compromise Accounts: Email Accounts",
+      "tactic_id": "T1586.002",
+      "description": "Compromising a staff email account containing personal data",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--45d603c9-5c3b-43c7-872b-8957023c1747"
+      ],
+      "asset_refs": [
+        "attack-asset--2c771b47-8863-4a36-afbb-e76467c0c0d0"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--45d603c9-5c3b-43c7-872b-8957023c1747",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:56.113Z",
+      "modified": "2023-06-27T01:42:56.113Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--9b2b1e14-a3de-46ab-9ac4-bc4e4a91f56d"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--2c771b47-8863-4a36-afbb-e76467c0c0d0",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:56.113Z",
+      "modified": "2023-06-27T01:42:56.113Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "A Staff Emai Account"
+    }
+  ]
+}
