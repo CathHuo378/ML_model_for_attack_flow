@@ -1,0 +1,300 @@
+{
+  "type": "bundle",
+  "id": "bundle--1790193b-d33b-486d-9cd0-cef09598aae7",
+  "spec_version": "2.1",
+  "created": "2023-06-27T01:43:05.586Z",
+  "modified": "2023-06-27T01:43:05.586Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "create_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Engenuity Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--f3412970-fef6-42b3-aed0-00cb2bc13353",
+      "spec_version": "2.1",
+      "created": "2023-05-21T13:36:25.182Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--910c3111-f3d6-4745-9a2a-37a50e5af8fc",
+      "start_refs": [
+        "attack-condition--1f6685ed-a874-403e-a0ac-c84558287b37",
+        "attack-action--0ecaf2c6-c106-44c0-8ae3-b7e7e27d3a4c"
+      ],
+      "name": "Twilio",
+      "description": "An attack flow chart on Twilio's data breach incident",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "Incident Report: Employee and Customer Account Compromise",
+          "description": null,
+          "url": "https://www.twilio.com/blog/august-2022-social-engineering-attack"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--910c3111-f3d6-4745-9a2a-37a50e5af8fc",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--4adbd374-bd45-414c-90cf-3652236396ff",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Phishing for Information: Spearphishing Link",
+      "tactic_id": "T1598.003",
+      "description": "The threat actor sent spearphishing text messages to current and former Twilio employees.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--14a9a68c-6eb1-48a7-ae58-3f3d78962078"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--df3ba7de-7078-4b51-82f8-5e98c0b8b136",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "User Execution: Malicious Link",
+      "tactic_id": "T1204.001",
+      "description": "The threat actor prompted the targets to click on a link to a landing page that impersonated Twilio’s sign-in page.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--14a9a68c-6eb1-48a7-ae58-3f3d78962078"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f4fdba9b-7771-445c-9f7c-0a5498038f68",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Valid Accounts",
+      "tactic_id": "T1078",
+      "description": "The attackers used the stolen credentials to gain access to some of our internal systems, where they were able to access certain customer data.",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--5dd53a0e-1002-4dc1-8ad1-8d3aa95ebeaf"
+      ],
+      "effect_refs": [
+        "attack-action--156eee40-33f2-4b4a-9451-d72be9b168dd"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--1f6685ed-a874-403e-a0ac-c84558287b37",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Some Twilio employees entered their credentials on the fake sign-in page",
+      "on_true_refs": [
+        "attack-action--90804896-4199-4c4b-94a5-7bc62e438398"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--5dd53a0e-1002-4dc1-8ad1-8d3aa95ebeaf",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Internal Twilio administrative tools and applications"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--483667f3-13fe-4a87-b6da-c4a4611612b2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Customer Account Records",
+      "description": "209 customers and 93 Authy end users accounts"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--2019496d-1318-49f1-9835-181078c5a5b8",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Employees' credentials"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0ecaf2c6-c106-44c0-8ae3-b7e7e27d3a4c",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Gather Victim Identity Information",
+      "tactic_id": "T1589",
+      "description": "The threat actor identified the mobile phone numbers of employees at Twilio.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--4adbd374-bd45-414c-90cf-3652236396ff",
+        "attack-action--df3ba7de-7078-4b51-82f8-5e98c0b8b136"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--14a9a68c-6eb1-48a7-ae58-3f3d78962078",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-condition--1f6685ed-a874-403e-a0ac-c84558287b37"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--90804896-4199-4c4b-94a5-7bc62e438398",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.586Z",
+      "modified": "2023-06-27T01:43:05.586Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Gather Victim Identity Information: Employee Names",
+      "tactic_id": "T1589.003",
+      "description": "The threat actor matched the employee names from sources with their phone numbers.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--f4fdba9b-7771-445c-9f7c-0a5498038f68"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--744a02e2-1b9d-4f2f-b661-88f108178cdb",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.587Z",
+      "modified": "2023-06-27T01:43:05.587Z",
+      "name": "0ktapus/Scatter Swine",
+      "threat_actor_types": [
+        "Phishing attacks"
+      ]
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--f7b4dace-1314-4406-a928-2d1d48227c26",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.587Z",
+      "modified": "2023-06-27T01:43:05.587Z",
+      "name": "The 0ktapus Campaign",
+      "description": "A wide-scale set of attacks have been launched against numerous technology companies, telecommunications providers, and cryptocurrency-related individuals and organizations. The attackers targeted employees of companies that are customers of IAM leader Okta. These employees received text messages containing links to phishing sites that mimicked the Okta authentication page of their organization."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--156eee40-33f2-4b4a-9451-d72be9b168dd",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.587Z",
+      "modified": "2023-06-27T01:43:05.587Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exfiltration Over Web Service",
+      "tactic_id": "T1567",
+      "description": "The attacker exfiltrated data through email.",
+      "confidence": 90,
+      "asset_refs": [
+        "attack-asset--483667f3-13fe-4a87-b6da-c4a4611612b2"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ec6b53c-993d-423a-9914-7724995821c0",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:43:05.587Z",
+      "modified": "2023-06-27T01:43:05.587Z",
+      "relationship_type": "related-to",
+      "source_ref": "campaign--f7b4dace-1314-4406-a928-2d1d48227c26",
+      "target_ref": "threat-actor--744a02e2-1b9d-4f2f-b661-88f108178cdb"
+    }
+  ]
+}

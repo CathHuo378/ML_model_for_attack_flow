@@ -1,0 +1,770 @@
+{
+  "type": "bundle",
+  "id": "bundle--020e7edd-bbba-4d6c-8299-e4753a6df35c",
+  "spec_version": "2.1",
+  "created": "2023-06-27T01:42:50.563Z",
+  "modified": "2023-06-27T01:42:50.563Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "create_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Engenuity Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--046ccb83-48f1-45b8-b736-7240beb8c23f",
+      "spec_version": "2.1",
+      "created": "2023-05-21T15:02:31.610Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--7cc2cba5-bfb5-4586-b1db-7e952b06ff81",
+      "start_refs": [
+        "attack-action--d775c7e5-50af-48c6-8f46-33dd82229aef",
+        "attack-action--f2d7593e-34c2-4b28-913f-63cf6e151cdb",
+        "attack-action--d93c79a2-48e0-4719-a856-e8f2f804e05b",
+        "attack-action--010df928-b5d2-4428-a41a-3e5aa708d5ca",
+        "attack-action--9aa392ef-97f0-4edb-a197-06559a98530a",
+        "attack-action--883d2cac-1d65-48cc-89ce-ff228204da7e",
+        "attack-condition--f8b6ee52-b2f1-4b4c-aa49-c39d1a04d340",
+        "attack-condition--294e312c-0b73-417b-adb1-48bb1765687e",
+        "attack-condition--bc854a26-96ca-4551-853e-a0fbc1dc7d53"
+      ],
+      "name": "SolarWinds",
+      "description": "An attack flow chart on the SolarWinds data breach",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "EXECUTIVE SUMMARY",
+          "description": null,
+          "url": "https://www.picussecurity.com/resource/blog/ttps-used-in-the-solarwinds-breach"
+        },
+        {
+          "source_name": "New Findings From Our Investigation of SUNBURST",
+          "description": null,
+          "url": "https://orangematter.solarwinds.com/2021/01/11/new-findings-from-our-investigation-of-sunburst/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--7cc2cba5-bfb5-4586-b1db-7e952b06ff81",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--d775c7e5-50af-48c6-8f46-33dd82229aef",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Develop Capabilities: Malware",
+      "tactic_id": "T1587.001",
+      "description": "The attackers embedded their malicious payload on a legitimate component of the SolarWinds Orion Platform software.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--7a489e85-cebf-44be-a049-34c8d4415c91"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f2d7593e-34c2-4b28-913f-63cf6e151cdb",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Acquire Infrastructure: Virtual Private Server",
+      "tactic_id": "T1583.003",
+      "description": "The threat actor leverages VPSs to use only IP addresses originating from the same country as the victim.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--7a489e85-cebf-44be-a049-34c8d4415c91"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--d93c79a2-48e0-4719-a856-e8f2f804e05b",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Supply Chain Compromise: Compromise Software Supply Chain",
+      "tactic_id": "T1195.002",
+      "description": "Adversaries embedded malicious code into a SolarWinds library file, SolarWinds.Orion.Core.BusinessLayer.dll. ",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-condition--bdd8dee8-fdf0-4281-a448-e47b0dd040c8"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--22efd322-3bdb-4c2d-b9d8-ea9e477173f9",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Services: Service Execution",
+      "tactic_id": "T1569.002",
+      "description": "During the installation of the SolarWinds application or update, the tampered DLL file is loaded by the legitimate SolarWinds.BusinessLayerHost.exe or SolarWinds.BusinessLayerHostx64.exe and installed as a Windows service.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--ad53693b-94d5-421a-bcfc-7334c9c08cd1",
+        "attack-action--f6a4301e-c4fc-4b8d-a17d-735869fee987"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--ad53693b-94d5-421a-bcfc-7334c9c08cd1",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Create or Modify System Process: Windows Service",
+      "tactic_id": "T1543.003",
+      "description": "The TEARDROP malware loaded by the modified DLL runs as a service in the background.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--88fcdcdc-4434-4cda-ab8d-46b6a6c4542b"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--010df928-b5d2-4428-a41a-3e5aa708d5ca",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Valid Accounts",
+      "tactic_id": "T1078",
+      "description": "Threat actors use multiple valid accounts for lateral movement.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--8a6f549a-42c0-4d5b-b200-2fd528dd197a",
+        "attack-action--a5cc65d0-f8df-42bb-b3c2-b9bbb407235e",
+        "attack-action--82761cf1-fdeb-4bd8-ad13-13fb7d80a9b2",
+        "attack-action--c8141417-8484-45f2-ade2-c40d9618f81a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8a6f549a-42c0-4d5b-b200-2fd528dd197a",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Subvert Trust Controls: Code Signing",
+      "tactic_id": "T1553.002",
+      "description": "Attackers have compromised digital certificates of SolarWinds",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--7eb95a7e-6374-48c0-aa45-0189b9e3149a"
+      ],
+      "asset_refs": [
+        "attack-asset--c4db6e7d-6e96-4ac3-8440-de089f2123a8"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a5cc65d0-f8df-42bb-b3c2-b9bbb407235e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Masquerading: Match Legitimate Name or Location",
+      "tactic_id": "T1036.005",
+      "description": "The threat actor used a legitimate hostname found within the victim’s environment as the hostname on their Command and Control (C2) infrastructure to avoid detection [1].  Moreover, the malware masquerades its C2 traffic as the Orion Improvement Program (OIP) protocol.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--bfdbae8f-d77b-4b8f-bf62-a9850dbd835d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--82761cf1-fdeb-4bd8-ad13-13fb7d80a9b2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Virtualization/Sandbox Evasion: Time Based Evasion",
+      "tactic_id": "T1497.003",
+      "description": "Attackers delayed Command and Control communication two weeks after the installation.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--bfdbae8f-d77b-4b8f-bf62-a9850dbd835d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9aa392ef-97f0-4edb-a197-06559a98530a",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Obfuscated Files or Information: Steganography",
+      "tactic_id": "T1027.003",
+      "description": "The TEARDROP malware used in the breach reads from the file gracious_truth.jpg that includes a malicious payload.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--fdfed1c9-29d5-49b9-897e-33b67d9fc3dd"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--fdfed1c9-29d5-49b9-897e-33b67d9fc3dd",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Indicator Removal on Host: File Deletion",
+      "tactic_id": "T1070.004",
+      "description": "The threat actor removed their malicious files, including backdoors, after the remote access.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--8fcc7dee-73e1-490a-8f50-8322200e1434",
+        "attack-action--94e56ee1-d092-4556-8a5d-3dbe9dc6caa2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8fcc7dee-73e1-490a-8f50-8322200e1434",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Process Discovery",
+      "tactic_id": "T1057",
+      "description": "The threat actor got a list of processes to shape follow-on behaviors",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--9feb4f5e-56c5-4b63-bb2b-b198098ba32e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--94e56ee1-d092-4556-8a5d-3dbe9dc6caa2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Query Registry",
+      "tactic_id": "T1012",
+      "description": "The threat actor obtained Cryptographic Machine GUID by querying the value of MachineGuid in the  HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography key to generate a unique userID for each victim.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--9feb4f5e-56c5-4b63-bb2b-b198098ba32e"
+      ],
+      "asset_refs": [
+        "attack-asset--f9925219-3f65-4b26-b108-086eeb2dbded"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b3717a66-8a02-48f8-a8f9-6157165be10f",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote Services",
+      "tactic_id": "T1021",
+      "description": "The threat actor used valid accounts and legitimate remote access to move laterally in the target network.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--c3e2dbe6-964a-4e5d-b777-f79158060207"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--ea077cdd-3042-4273-afa1-ff6c2f236221",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Application Layer Protocol: Web Protocols",
+      "tactic_id": "T1071.001",
+      "description": "Adversaries communicate using application layer (L7) protocols and blend Command and Control traffic with existing web traffic to avoid detection and network filtering",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--09fd4ef8-223d-4bc9-a6dd-74fb173e4042"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--acc8fa24-3e76-45cd-a92f-ff0ba3a4162a",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Dynamic Resolution: Domain Generation Algorithms",
+      "tactic_id": "T1568.002",
+      "description": "The backdoor used a DGA to determine its C2 server.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--09fd4ef8-223d-4bc9-a6dd-74fb173e4042"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--883d2cac-1d65-48cc-89ce-ff228204da7e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exfiltration Over C2 Channel",
+      "tactic_id": "T1041",
+      "description": "The threat actor uses HTTP PUT or HTTP POST requests when the collected data is being exfiltrated to the C2 server. If the payload is bigger than 10000 bytes; the POST method is used. Otherwise, the PUT method is used.",
+      "confidence": 100
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--7a489e85-cebf-44be-a049-34c8d4415c91",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--d93c79a2-48e0-4719-a856-e8f2f804e05b"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--bfdbae8f-d77b-4b8f-bf62-a9850dbd835d",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--9aa392ef-97f0-4edb-a197-06559a98530a"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--9feb4f5e-56c5-4b63-bb2b-b198098ba32e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-condition--294e312c-0b73-417b-adb1-48bb1765687e"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--09fd4ef8-223d-4bc9-a6dd-74fb173e4042",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--883d2cac-1d65-48cc-89ce-ff228204da7e"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--e4bea831-1b00-4f58-9c87-d8fa477673bd",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "name": "TEARDROP",
+      "description": "A malicious 64-bit dynamic-link library (DLL) that decrypts and loads a malicious payload from an embedded code buffer.",
+      "malware_types": [
+        "DDoS"
+      ],
+      "is_family": false
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--c4db6e7d-6e96-4ac3-8440-de089f2123a8",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Digital Certificates of SolarWinds"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--f9925219-3f65-4b26-b108-086eeb2dbded",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Cryptographic Machine GUID"
+    },
+    {
+      "type": "malware",
+      "id": "malware--9756fc7c-07ef-4676-b269-abc4bd4e26c8",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "name": "SUNBURST",
+      "description": "The backdoored version of the DLL file in a DLL library, SolarWinds.Orion.Core.BusinessLayer.dll. ",
+      "malware_types": [
+        "backdoor"
+      ],
+      "is_family": false,
+      "capabilities": [
+        "The SUNBURST backdoor delivers different payloads, such as a previously unseen memory-only dropper dubbed TEARDROP by FireEye.",
+        "The TEARDROP dropper deploys an infamous post-compromise tool, Cobalt Strike Beacon."
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--0c8830a5-2596-42a4-b9f6-4b034518ca69",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "name": "SolarWinds.Orion.Core.BusinessLayer.dll"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--bdd8dee8-fdf0-4281-a448-e47b0dd040c8",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Attackers backdoored three versions of the Orion Platform software: 2019.4 HF 5, 2020.2 with no hotfix, and 2020.2 HF 1. The malicious DLL file was distributed via its automatic update mechanism. ",
+      "on_true_refs": [
+        "attack-action--22efd322-3bdb-4c2d-b9d8-ea9e477173f9"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--f8b6ee52-b2f1-4b4c-aa49-c39d1a04d340",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Attackers have compromised digital certificates of SolarWind",
+      "on_true_refs": [
+        "attack-operator--bfdbae8f-d77b-4b8f-bf62-a9850dbd835d"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--27da4c33-e54f-4bd1-aa68-12e343bd3a14",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "name": "gracious_truth.jpg"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--294e312c-0b73-417b-adb1-48bb1765687e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Generating a unique userID for each victim",
+      "on_true_refs": [
+        "attack-action--b3717a66-8a02-48f8-a8f9-6157165be10f",
+        "attack-action--c43ca8aa-ebbe-4ff6-83c4-babbcdb0a6c4"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c43ca8aa-ebbe-4ff6-83c4-babbcdb0a6c4",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Valid Accounts",
+      "tactic_id": "T1078",
+      "description": "Adversaries use valid accounts to log into a remote service, such as remote desktop protocol (RDP), SSH, and VNC.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--c3e2dbe6-964a-4e5d-b777-f79158060207"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--c3e2dbe6-964a-4e5d-b777-f79158060207",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-condition--bc854a26-96ca-4551-853e-a0fbc1dc7d53"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--bc854a26-96ca-4551-853e-a0fbc1dc7d53",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "The attacker is able to move laterally in the target network",
+      "on_true_refs": [
+        "attack-action--acc8fa24-3e76-45cd-a92f-ff0ba3a4162a",
+        "attack-action--ea077cdd-3042-4273-afa1-ff6c2f236221"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f6a4301e-c4fc-4b8d-a17d-735869fee987",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Hijack Execution Flow: DLL Side-Loading",
+      "tactic_id": "T1574.002",
+      "description": "The TEARDROP malware loaded by the modified DLL runs as a service in the background.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--88fcdcdc-4434-4cda-ab8d-46b6a6c4542b"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--88fcdcdc-4434-4cda-ab8d-46b6a6c4542b",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--010df928-b5d2-4428-a41a-3e5aa708d5ca"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c8141417-8484-45f2-ade2-c40d9618f81a",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Steal or Forge Authentication Certificates",
+      "tactic_id": "T1649",
+      "description": "Attackers have removed digital certificates of SolarWinds",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--7eb95a7e-6374-48c0-aa45-0189b9e3149a"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--7eb95a7e-6374-48c0-aa45-0189b9e3149a",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-condition--f8b6ee52-b2f1-4b4c-aa49-c39d1a04d340"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9a841f9-abce-4930-9667-491ebb9bcec6",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--d93c79a2-48e0-4719-a856-e8f2f804e05b",
+      "target_ref": "file--0c8830a5-2596-42a4-b9f6-4b034518ca69"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01bb4b60-f87b-44c7-8daf-cbbc35ecea19",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--ad53693b-94d5-421a-bcfc-7334c9c08cd1",
+      "target_ref": "malware--e4bea831-1b00-4f58-9c87-d8fa477673bd"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--39f84784-d851-455f-a329-9ec2bf70b4c5",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.563Z",
+      "modified": "2023-06-27T01:42:50.563Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--9aa392ef-97f0-4edb-a197-06559a98530a",
+      "target_ref": "file--27da4c33-e54f-4bd1-aa68-12e343bd3a14"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--79b81913-e0be-453e-a950-a0df622586ed",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:50.564Z",
+      "modified": "2023-06-27T01:42:50.564Z",
+      "relationship_type": "related-to",
+      "source_ref": "malware--9756fc7c-07ef-4676-b269-abc4bd4e26c8",
+      "target_ref": "attack-action--d775c7e5-50af-48c6-8f46-33dd82229aef"
+    }
+  ]
+}

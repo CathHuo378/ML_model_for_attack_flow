@@ -1,0 +1,323 @@
+{
+  "type": "bundle",
+  "id": "bundle--bd672fa0-27d0-4acd-bf19-01ab69fcc1aa",
+  "spec_version": "2.1",
+  "created": "2023-06-27T01:42:12.508Z",
+  "modified": "2023-06-27T01:42:12.508Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "create_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Engenuity Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--042ae397-28a3-4fee-ab3b-84a85df4151b",
+      "spec_version": "2.1",
+      "created": "2023-05-26T02:52:47.296Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--5aeec785-5e7a-4373-9086-87ce909b36e0",
+      "start_refs": [
+        "attack-condition--0b8ca4c8-06c9-4473-b50d-c0921bd2d1ea",
+        "attack-action--9fd305d5-ca2b-45c0-899d-88460a9dd7e9"
+      ],
+      "name": "Marriott",
+      "description": "An attack flow chart on data breach of the Marriott hotel chain in 2018.",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "Soresnson Testimony",
+          "description": null,
+          "url": "https://www.hsgac.senate.gov/wp-content/uploads/imo/media/doc/Soresnson%20Testimony.pdf"
+        },
+        {
+          "source_name": "Marriott data breach FAQ: How did it happen and what was the impact?",
+          "description": null,
+          "url": "https://www.csoonline.com/article/3441220/marriott-data-breach-faq-how-did-it-happen-and-what-was-the-impact.html"
+        },
+        {
+          "source_name": "Marriott Data Breach",
+          "description": null,
+          "url": "https://www3.cs.stonybrook.edu/~ise331/Slides/Marriott%20Data%20Breach.pdf"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--5aeec785-5e7a-4373-9086-87ce909b36e0",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--516172d1-83f3-443d-809d-eefc01ee222b",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Develop Capabilities: Malware",
+      "tactic_id": "T1587.001",
+      "description": "The attackers used the Malware Mimikatz to search a device’s memory for usernames and passwords.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--d8a363aa-6eb8-4e0e-9e1d-dcbf210ec3ee"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--605fe3d9-f87c-4961-a833-02575c6048ea",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "name": "Mimikatz",
+      "description": "An open source malware program used by hackers and penetration testers to gather credentials on Windows computers",
+      "is_family": false
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--eac26f5a-db22-42dc-934b-2eeae155fef2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "383 guest records",
+      "description": "Including:\n- 18.5 million encrypted passport numbers\n- 5.25 million unencrypted passport numbers\n- 9.1 million encrypted payment card numbers"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--d5479488-b123-47de-a683-5a7466e37fc2",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Archive Collected Data",
+      "tactic_id": "T1560",
+      "description": "The attackers encrypted and attempted to remove data from the Starwood systems.",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--eac26f5a-db22-42dc-934b-2eeae155fef2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--247ceb0c-b3d0-4d77-930c-0d1f9768bcae",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote Access Software",
+      "tactic_id": "T1219",
+      "description": "The attackers used a Remote Access Trojan (RAT).",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-operator--d8a363aa-6eb8-4e0e-9e1d-dcbf210ec3ee"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--d8a363aa-6eb8-4e0e-9e1d-dcbf210ec3ee",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-condition--0b8ca4c8-06c9-4473-b50d-c0921bd2d1ea"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--0b8ca4c8-06c9-4473-b50d-c0921bd2d1ea",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "The attackers gained control of the administrator account",
+      "on_true_refs": [
+        "attack-action--059aae0f-0b11-4bcc-815c-d73abfaec778"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9fd305d5-ca2b-45c0-899d-88460a9dd7e9",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Phishing for Information: \tSpearphishing Attachment",
+      "tactic_id": "T1598.002",
+      "description": "The attackers sent phishing emails attached with the Remote Access Trojan (RAT)",
+      "confidence": 90,
+      "effect_refs": [
+        "attack-action--247ceb0c-b3d0-4d77-930c-0d1f9768bcae",
+        "attack-action--516172d1-83f3-443d-809d-eefc01ee222b"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a610a549-e3f6-4714-b790-4a716c58d91d",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Obfuscated Files or Information",
+      "tactic_id": "T1027",
+      "description": "The attackers encrypted the files to make them difficult to discover",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--839282d4-6655-4bc6-aae8-2b59d632987c"
+      ],
+      "effect_refs": [
+        "attack-action--d5479488-b123-47de-a683-5a7466e37fc2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--d6e18524-6f81-4ad1-ac3c-82a4cba620ed",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Indicator Removal: File Deletion",
+      "tactic_id": "T1070.004",
+      "description": "The attackers removed the files from the Starwood network.",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--839282d4-6655-4bc6-aae8-2b59d632987c"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--839282d4-6655-4bc6-aae8-2b59d632987c",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Files containing guest records"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--059aae0f-0b11-4bcc-815c-d73abfaec778",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Valid Accounts",
+      "tactic_id": "T1078",
+      "description": "The attackers used the administrator account to access the Starwood Guest Reservation Database and made database query for guest records.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--a610a549-e3f6-4714-b790-4a716c58d91d",
+        "attack-action--d6e18524-6f81-4ad1-ac3c-82a4cba620ed"
+      ],
+      "asset_refs": [
+        "attack-asset--ffc0edad-0688-4738-ad42-08cfe8a86479"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--ffc0edad-0688-4738-ad42-08cfe8a86479",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "The Starwood Guest Reservation Database"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7de3bead-fad3-408b-8b40-773c1f4bae17",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:12.508Z",
+      "modified": "2023-06-27T01:42:12.508Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--516172d1-83f3-443d-809d-eefc01ee222b",
+      "target_ref": "malware--605fe3d9-f87c-4961-a833-02575c6048ea"
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "type": "bundle",
+  "id": "bundle--982dba4e-4949-47eb-b849-18f4baf95409",
+  "spec_version": "2.1",
+  "created": "2023-06-27T01:42:41.855Z",
+  "modified": "2023-06-27T01:42:41.855Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "create_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Engenuity Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--28f51dd5-9132-433c-ac99-336666f6e18f",
+      "spec_version": "2.1",
+      "created": "2023-04-23T12:20:21.972Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--d1a81e73-bc92-4b29-8be1-3682de314ed9",
+      "start_refs": [
+        "attack-action--a7beee5f-c502-40f8-872b-2f3c25204a42"
+      ],
+      "name": "optus",
+      "description": "An attack flow chart for the Optus data breach",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "How Did the Optus Data Breach Happen?",
+          "description": null,
+          "url": "https://www.upguard.com/blog/how-did-the-optus-data-breach-happen"
+        },
+        {
+          "source_name": "Australia: Optus data breach highlights widespread security vulnerabilities",
+          "description": null,
+          "url": "https://www.wsws.org/en/articles/2022/10/06/afrq-o06.html"
+        },
+        {
+          "source_name": "Optus data breach: everything we know so far about what happened",
+          "description": null,
+          "url": "https://www.theguardian.com/business/2022/sep/29/optus-data-breach-everything-we-know-so-far-about-what-happened"
+        },
+        {
+          "source_name": "Optus Data Breach Timeline",
+          "description": "https://cyberknow.medium.com/optus-data-breach-timeline-c02d8c5298c4",
+          "url": null
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--d1a81e73-bc92-4b29-8be1-3682de314ed9",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--fd57c55c-ca07-4251-bb5f-7b9f77cf6c9e",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Unsecured Credentials: Cloud Instance Metadata API",
+      "tactic_id": "T1552.005",
+      "description": "The attacker connected to an unprotected and publically exposed API to gain access to a customer database",
+      "confidence": 90,
+      "effect_refs": [
+        "attack-action--49909f1d-b257-4a9b-b7e5-38b5134e8d01"
+      ],
+      "asset_refs": [
+        "attack-asset--ddc0aa96-7499-472f-898b-fa8fcde04dd3"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--49909f1d-b257-4a9b-b7e5-38b5134e8d01",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Process Discovery",
+      "tactic_id": "T1057",
+      "description": "Backend processes call upon sensitive customer records to load a customer profile",
+      "confidence": 70,
+      "effect_refs": [
+        "attack-condition--d0716be7-00db-40c2-a0b1-f67c36f08be6"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--69b13c2d-065a-45c2-8675-fbbad90057cc",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Automated Exfiltration",
+      "tactic_id": "T1020",
+      "description": "The attacker used an automated script to facilitate the data exfiltration process.",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--cf6dc799-6f35-4af5-899f-84e12c45ec0f"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--ddc0aa96-7499-472f-898b-fa8fcde04dd3",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Customer databases"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--cf6dc799-6f35-4af5-899f-84e12c45ec0f",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Customer Personal Data",
+      "description": "Driver's License numbers\nPhone numbers\nDates of birth\nHome Addresses"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--6a0dc7f6-8ed6-428d-ba66-daa739977ec9",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "External Remote Services",
+      "tactic_id": "T1133",
+      "description": "The attacker used VPN to connect to the Optus internal network resources from European IP addresses",
+      "confidence": 70,
+      "effect_refs": [
+        "attack-condition--ae5b294f-cd8d-452c-bd8b-5a8cf8078481"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--67cc6b88-4005-4069-a4f7-96d649fc61f1",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "The API didn’t require user authentication before facilitating a connection",
+      "on_true_refs": [
+        "attack-action--6a0dc7f6-8ed6-428d-ba66-daa739977ec9"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--6aacadeb-3661-4e41-b033-71640d7271fb",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "A Public-Facing API",
+      "description": "An unprotected and publicly exposed API which didn’t require user authentication before facilitating a connection"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--ae5b294f-cd8d-452c-bd8b-5a8cf8078481",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "The open API was granting access to sensitive customer data",
+      "on_true_refs": [
+        "attack-action--fd57c55c-ca07-4251-bb5f-7b9f77cf6c9e"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--d0716be7-00db-40c2-a0b1-f67c36f08be6",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "All customer identifiers differed by an increment of 1",
+      "on_true_refs": [
+        "attack-action--69b13c2d-065a-45c2-8675-fbbad90057cc"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a7beee5f-c502-40f8-872b-2f3c25204a42",
+      "spec_version": "2.1",
+      "created": "2023-06-27T01:42:41.855Z",
+      "modified": "2023-06-27T01:42:41.855Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Cloud Infrastructure Discovery",
+      "tactic_id": "T1580",
+      "description": "The attacker discovered an unprotected and publically exposed API.",
+      "confidence": 100,
+      "asset_refs": [
+        "attack-asset--6aacadeb-3661-4e41-b033-71640d7271fb"
+      ],
+      "effect_refs": [
+        "attack-condition--67cc6b88-4005-4069-a4f7-96d649fc61f1"
+      ]
+    }
+  ]
+}
